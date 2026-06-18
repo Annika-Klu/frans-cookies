@@ -2,14 +2,7 @@
 
 import { useState } from "react";
 import CookieCard from "./CookieCard";
-
-type Cookie = {
-  _id: string;
-  name: string;
-  price: number;
-  description?: string;
-  image?: any;
-};
+import { Cookie } from "@/types/cookies";
 
 type Props = {
   cookies: Cookie[];
@@ -17,20 +10,6 @@ type Props = {
 
 export default function CookieCarousel({ cookies }: Props) {
   const [index, setIndex] = useState(0);
-  //const [cookies, setCookies] = useState([]);
-
-  //   useEffect(() => {
-  //   client.fetch(`*[_type == "cookie"]`).then((data) => {
-  //     const formatted = data.map((cookie: Cookie) => ({
-  //       name: cookie.name,
-  //       price: cookie.price,
-  //       image: urlFor(cookie.image?.asset?._ref).width(300).url(),
-  //       description: cookie.description,
-  //     }));
-
-  //     setCookies(formatted);
-  //   });
-  // }, []);
 
   if (!cookies.length) return null;
 
