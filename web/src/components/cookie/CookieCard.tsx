@@ -1,4 +1,5 @@
 import { CookieViewModel } from "@/types/cookies";
+import { currency } from "@/utils";
 
 type Props = {
   cookie: CookieViewModel;
@@ -13,14 +14,24 @@ export default function CookieCard({
   outline = false,
   size = "md",
 }: Props) {
+  const showIsNewBadge = showDetails && cookie.isNew;
   const showDescription = showDetails && cookie.description;
   return (
     <div className={`card ${outline ? "card-outline" : ""} ${size}`}>
-      <img src={cookie.image} alt={cookie.name} />
+      <div className="first-row">
+        <img src={cookie.image} alt={cookie.name} />
+        {showIsNewBadge && (
+          <span className="new">NEU</span>
+        )}
 
-      <p className={`name ${showDetails ? "playful" : ""}`}>{cookie.name}</p>
+        <p className={`name ${showDetails ? "playful" : ""}`}>
+          {cookie.name}
+        </p>
+      </div>
 
-      {showDetails && <p className="price">{cookie.price}€</p>}
+        {showDetails && 
+          <p className="price">{currency(cookie.price)}</p>
+        }
 
       {showDescription && (
         <p className="desc">{cookie.description}</p>

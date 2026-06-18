@@ -13,8 +13,7 @@
 }
 
 .view-switch button:disabled {
-    color: var(--color-pink-500);
-    font-weight: 600;
+    border-bottom: 1px solid var(--color-pink-300);
 }
 
 .view-switch button:hover {
@@ -99,6 +98,7 @@
 .card {
   text-align: center;
   transition: 0.2s ease;
+    position: relative;
 }
 
 .card img {
@@ -113,8 +113,8 @@
 }
 
 .card.sm img {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
 }
 
 .card.md img {
@@ -131,10 +131,28 @@
   font-weight: bold;
 }
 
+.card.card-outline .first-row {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
 .name {
-  margin-top: 6px;
+    font-size: .8rem;
+    margin-top: 6px;
 }
 
 .name.playful {
+    font-size: 1.5rem;
     font-family:"Pacifico", cursive;
+}
+
+.new {
+    position: absolute;
+    top: .5rem;
+    left: 4rem;
+    color: var(--color-background);
+    background-color: var(--color-pink-500);
+    border-radius: .25rem;
+    padding: .25rem .5rem;
 }
