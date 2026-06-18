@@ -1,4 +1,5 @@
 export type Cookie = {
+  _createdAt: string;
   name: string;
   price: number;
   description?: string;
@@ -7,6 +8,7 @@ export type Cookie = {
 
 export type CookieViewModel = {
   name: string;
+  isNew: boolean;
   price: number;
   description?: string;
   image: string;

@@ -6,6 +6,7 @@ import CookieCarousel from "./CookieCarousel";
 import CookiePriceList from "./CookiePriceList";
 import { client, urlFor } from "@/sanity/client";
 import { Cookie, CookieViewModel } from "@/types/cookies";
+import { isNew } from "@/utils";
 
 export default function Cookies() {
   const [cookies, setCookies] = useState<CookieViewModel[]>([]);
@@ -15,6 +16,7 @@ export default function Cookies() {
       const formatted = data.map((cookie) => ({
         name: cookie.name,
         price: cookie.price,
+        isNew: isNew(cookie._createdAt),
         description: cookie.description,
         image: urlFor(cookie.image?.asset?._ref).width(300).url(),
       }));
