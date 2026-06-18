@@ -1,7 +1,7 @@
-import { Cookie } from "@/types/cookies";
+import { CookieViewModel } from "@/types/cookies";
 
 type Props = {
-  cookie: Cookie;
+  cookie: CookieViewModel;
   showDetails?: boolean;
   outline?: boolean;
   size?: "sm" | "md" | "lg";
