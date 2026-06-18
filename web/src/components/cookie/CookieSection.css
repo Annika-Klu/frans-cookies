@@ -1,0 +1,140 @@
+/* Main */
+
+.wrap {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.view-switch {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.view-switch button:disabled {
+    color: var(--color-pink-500);
+    font-weight: 600;
+}
+
+.view-switch button:hover {
+    color: var(--color-pink-500);
+    cursor: pointer;
+}
+
+/* Price List */
+
+.price-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.search {
+    border: 1px solid var(--color-pink-200);
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+}
+
+/* Carousel */
+
+
+.carousel {
+  display: grid;
+  grid-template-columns: 150px 300px 150px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main h3 {
+    font-family:"Pacifico", cursive;
+    font-size: 1.2rem;
+    margin: .5rem 0;
+}
+
+.main p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.side button {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #0b1b3a;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+@media (max-width: 768px) {
+    .side {
+    display: none;
+    }
+
+    .carousel {
+    gap: 10px;
+    }
+}
+
+/* Card */
+
+.card {
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.card img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card.card-outline {
+  border: 1px solid #d7d7d7;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.card.sm img {
+  width: 80px;
+  height: 80px;
+}
+
+.card.md img {
+  width: 120px;
+  height: 120px;
+}
+
+.card.lg img {
+  width: 180px;
+  height: 180px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.name {
+  margin-top: 6px;
+}
+
+.name.playful {
+    font-family:"Pacifico", cursive;
+}

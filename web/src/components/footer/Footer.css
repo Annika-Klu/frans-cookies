@@ -1,0 +1,57 @@
+.footer {
+  background: #0b1b3a;
+  color: white;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brand h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.brand p {
+  margin-top: 0.25rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #ff4fa3;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links {
+    justify-content: center;
+  }
+}
